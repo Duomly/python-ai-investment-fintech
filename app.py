@@ -11,6 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhos
 # Connect with db and import models
 db = SQLAlchemy(app)
 from models.prices import PriceModel
+from prices.prices import getPrices
 migrate = Migrate(app, db)
 
 # App run

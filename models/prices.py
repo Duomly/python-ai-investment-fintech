@@ -2,15 +2,14 @@ from app import db
 
 class PriceModel(db.Model):
     __tablename__ = 'prices'
-
     id = db.Column(db.Integer, primary_key=True)
     company = db.Column(db.String())
-    date = db.Column(db.String())
-    openPrice = db.Column(db.Integer())
-    highPrice = db.Column(db.Integer())
-    lowPrice = db.Column(db.Integer())
-    closePrice = db.Column(db.Integer())
-    volume = db.Column(db.Integer())
+    date = db.Column(db.Date())
+    openPrice = db.Column(db.Numeric())
+    highPrice = db.Column(db.Numeric())
+    lowPrice = db.Column(db.Numeric())
+    closePrice = db.Column(db.Numeric())
+    volume = db.Column(db.Numeric())
 
     def __init__(self, company, date, openPrice, highPrice, lowPrice, closePrice, volume):
         self.company = company
