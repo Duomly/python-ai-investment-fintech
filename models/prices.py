@@ -5,7 +5,7 @@ class PriceModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     company = db.Column(db.String())
-    date = db.Column(db.Integer())
+    date = db.Column(db.String())
     openPrice = db.Column(db.Integer())
     highPrice = db.Column(db.Integer())
     lowPrice = db.Column(db.Integer())
